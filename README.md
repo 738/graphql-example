@@ -1,3 +1,3 @@
 # GraphQL example
 
-- ssince 2018.10.03
+- since 2018.10.03
