@@ -1,3 +1,35 @@
+type User {
+    id: Int!
+    nickname: String!
+}
+
+type Board {
+    id: Int
+    userId: Int
+    title: String
+    contents: String
+    insertTime: String
+    updateTime: String
+    comments: [Comment]
+}
+
+type Comment {
+    userId: Int
+    contents: String
+    insertTime: String
+    updateTime: String
+    reComments: [ReComment]
+}
+
+type ReComment {
+    userId: Int
+    contents: String
+    insertTime: String
+    updateTime: String
+}
+
 type Query {
-    name: String!
+    boards: [Board]  
+    users: [User]
+    user(id: Int!): User!
 }

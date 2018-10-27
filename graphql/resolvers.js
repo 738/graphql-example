@@ -1,6 +1,10 @@
+import { boards, users, getUserById } from './db';
+
 const resolvers = {
     Query: {
-        name: () => 'jonjee'
+        boards: () => boards,
+        users: () => users,
+        user: (_, { id }) => getUserById(id),
     }
 }
 
